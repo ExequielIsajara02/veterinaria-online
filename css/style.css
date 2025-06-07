@@ -12,16 +12,26 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: blueviolet;
+    padding: 10px;
+    color: #fff;
+    background-color: #5CE65C;
+}
+
+header div a {
+    border-radius: 2px;
+    padding: 5px;
+    border: 2px solid #000;
+    color: #000;
+    text-decoration: none;
 }
 
 .main {
-    margin-top: 30px;
+    margin-top: 14px;
     text-align: center;
 }
 
 .main h2 {
-    color: blueviolet;
+    color: #5CE65C;
 }
 
 form {
@@ -40,7 +50,7 @@ form .info {
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 form .info div {
@@ -51,9 +61,145 @@ form .info div .enter-info {
     width: 100%;
     margin-bottom: 5px;
     padding: 5px;
+    outline: none;
+}
+
+form .info div .enter-info:focus {
+    border: 2px solid #5CE65C;
+}
+
+form .g-btn {
+    background-color: #5CE65C;
+    border: none;
+    width: 100px;
+    padding: 6px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 footer {
     margin-top: 60px;
-    background-color: blueviolet;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    padding: 40px;
+    text-align: center;
+    background-color: #5CE65C;
+}
+
+footer .contacts {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+footer .contacts div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+footer .contacts div img {
+    width: 28px;
+}
+
+footer .contacts div a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* Diseño Responsivo */
+/* Tablets (768px o menos) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    form .info {
+        width: 100%;
+    }
+
+    form .info div {
+        width: 100%;
+    }
+
+    footer {
+        padding: 30px 20px;
+    }
+
+    footer .contacts {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Móviles (480px o menos) */
+@media (max-width: 480px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 10px;
+    }
+
+    .main h2 {
+        font-size: 1.5rem;
+    }
+
+    .main img {
+        display: none;
+    }
+
+    .main div h3 {
+        margin-top: 10px;
+    }
+
+    form {
+        width: 100%;
+        height: 90%;
+        padding: 10px;
+    }
+
+    form .info div {
+        width: 100%;
+    }
+
+    form .g-btn {
+        width: 80px;
+        padding: 5px;
+    }
+
+    footer {
+        justify-content: center;
+        padding: 20px 10px;
+    }
+
+    footer .contacts {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    footer .contacts div img {
+        width: 24px;
+    }
 }
